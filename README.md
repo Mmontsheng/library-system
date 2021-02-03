@@ -38,19 +38,21 @@ It does not do much, it has the following request or endpoints
 I have already dockerised  the application.
 To cut it short, just run the `main.sh` file in this current dir and it will take care of the rest.
 
-You will need java 1.8, as I did not build the application the application before pushing this code.
+You will need java 1.8, as I did not push the built artifacts  with this code.
 You are more than welcome to do a PR to create and push the jar file.
 
 Assuming that you have java installed,
 Using your favourite linux machine terminal or using [git terminal](https://git-scm.com/downloads) (windows users) simply run `./main.sh`
 
-If you're windows users and don't have [git terminal](https://git-scm.com/downloads) (might be the time to get git) 
+If you're a windows user and don't have [git terminal](https://git-scm.com/downloads) (might be the time to get git)  :stuck_out_tongue_winking_eye:
 run the `main.bat` file...., double click it or open this directory and run `main.bat` on `cmd`
-
 
 ## Consuming the REST service
 I have added a Postman collection and a relevant ENV file, so grab those and fire-up your Postman app and make this API scream. 
 
+
+## Editing
+I advice you to add [lombok](https://projectlombok.org/), be warned your IDE will most likely scream :ghost: at you for not adding lombok. 
 
 ## TODOS
  - [x] Dockerize
