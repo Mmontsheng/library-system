@@ -48,7 +48,7 @@ If you're a windows user and don't have [git terminal](https://git-scm.com/downl
 run the `main.bat` file...., double click it or open this directory and run `main.bat` on `cmd`
 
 ## Consuming the REST service
-I have added a Postman collection and a relevant ENV file, so grab those and fire-up your Postman app and make this API scream. 
+I have added a [Postman collection](https://github.com/Mmontsheng/library-system/tree/master/postman) and a relevant ENV file, so grab those and fire-up your [Postman app](https://www.postman.com/) and make this API scream. 
 
 
 ## Editing
