@@ -1,0 +1,361 @@
+{
+	"info": {
+		"_postman_id": "db3e276a-9948-406d-82ac-86d14a6a0cea",
+		"name": "Library System",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Author",
+			"item": [
+				{
+					"name": "Get All",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}/authors",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"authors"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}/authors/65d6e8b6-6fa7-40c8-9aa0-5e4360d0ec67",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"authors",
+								"65d6e8b6-6fa7-40c8-9aa0-5e4360d0ec67"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Jane\",\r\n    \"surname\": \"Doe\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST}}/authors",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"authors"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Jane\",\r\n    \"surname\": \"Maoto\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST}}/authors/65d6e8b6-6fa7-40c8-9aa0-5e4360d0ec67",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"authors",
+								"65d6e8b6-6fa7-40c8-9aa0-5e4360d0ec67"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}/authors/774f052b-5391-4b5d-82d9-9353f01fad19",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"authors",
+								"774f052b-5391-4b5d-82d9-9353f01fad19"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Book",
+			"item": [
+				{
+					"name": "Get All",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}/books",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"books"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}/books/774f052b-5391-4b5d-82d9-9353f01fad19",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"books",
+								"774f052b-5391-4b5d-82d9-9353f01fad19"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Loream Ipsum\",\r\n    \"summary\": \"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis, blanditiis? Magni, necessitatibus deleniti corporis totam, modi quod odio harum corrupti eos ratione laboriosam sit, maiores quam? Corrupti necessitatibus exercitationem aliquam.\",\r\n    \"image\": \"path to a CND or a block storage such as S3\",\r\n    \"authorId\": \"65d6e8b6-6fa7-40c8-9aa0-5e4360d0ec67\",\r\n    \"isbn\": \"4554561\",\r\n    \"year\": 2010,\r\n    \"categoryId\": \"3dd17d2d-6d00-4410-84e6-819b31d30411\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST}}/books",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"books"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Toggle Status",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}/books/774f052b-5391-4b5d-82d9-9353f01fad19/toggle-status",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"books",
+								"774f052b-5391-4b5d-82d9-9353f01fad19",
+								"toggle-status"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Loream Ipsum\",\r\n    \"summary\": \"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis, blanditiis? Magni, necessitatibus deleniti corporis totam, modi quod odio harum corrupti eos ratione laboriosam sit, maiores quam? Corrupti necessitatibus exercitationem aliquam.\",\r\n    \"image\": \"path to a CND or a block storage such as S3\",\r\n    \"authorId\": \"65d6e8b6-6fa7-40c8-9aa0-5e4360d0ec67\",\r\n    \"isbn\": \"4554561\",\r\n    \"year\": 2010,\r\n    \"categoryId\": \"3dd17d2d-6d00-4410-84e6-819b31d30411\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST}}/books/774f052b-5391-4b5d-82d9-9353f01fad19",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"books",
+								"774f052b-5391-4b5d-82d9-9353f01fad19"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}/books/66a0eecd-fbbe-4c0e-9784-59ea2a4c1580",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"books",
+								"66a0eecd-fbbe-4c0e-9784-59ea2a4c1580"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Category",
+			"item": [
+				{
+					"name": "Get All",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}/categories",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"categories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}/categories/3dd17d2d-6d00-4410-84e6-819b31d30411",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"categories",
+								"3dd17d2d-6d00-4410-84e6-819b31d30411"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Fiction\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST}}/categories",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"categories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"John Does\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{HOST}}/categories/774f052b-5391-4b5d-82d9-9353f01fad19",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"categories",
+								"774f052b-5391-4b5d-82d9-9353f01fad19"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}/categories/774f052b-5391-4b5d-82d9-9353f01fad19",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"categories",
+								"774f052b-5391-4b5d-82d9-9353f01fad19"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

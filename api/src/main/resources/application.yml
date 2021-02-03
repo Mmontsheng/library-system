@@ -1,0 +1,22 @@
+spring:
+  session:
+    store-type: none
+  main:
+    allow-bean-definition-overriding: true
+  jpa:
+    generate-ddl: true
+    hibernate:
+      ddl-auto: update
+server:
+  port: 8080
+  compression:
+    enabled: true
+    mime-types:
+    - text/html
+    - text/plain
+    - application/json
+    min-response-size:
+      1KB
+thread:
+  pool:
+    size: 3
