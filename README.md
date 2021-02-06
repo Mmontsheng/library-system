@@ -43,6 +43,8 @@ Using your favourite linux machine terminal or using [git terminal](https://git-
 If you're a windows user and don't have [git terminal](https://git-scm.com/downloads) (might be the time to get git)  :stuck_out_tongue_winking_eye:
 run the `main.bat` file...., double click it or open this directory and run `main.bat` on `cmd`
 
+Application will start on port 8080 `http://localhost:8080`. You will  probably be welcomed by spring boot's 404 page if you try to hit that, so why not skip down to <b>consuming the rest services</b>.
+
 ## Consuming the REST service
 #### Postman Collection
 I have added a [Postman collection](https://github.com/Mmontsheng/library-system/tree/master/postman) and a relevant ENV file, so grab those and fire-up your [Postman app](https://www.postman.com/) and make this API scream. 
@@ -58,4 +60,5 @@ I advice you to add [lombok](https://projectlombok.org/), be warned your IDE wil
  - [x] Dockerize
  - [x] Add Docker compose and seperate DB and app
  - [ ] Add front end - Maybe Vue JS
+ - [ ] Add Spring boot security
  - [ ] Deploy on Kubernetes cluster
