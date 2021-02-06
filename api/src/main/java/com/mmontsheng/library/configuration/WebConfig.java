@@ -19,17 +19,16 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 @EnableWebMvc
 @Configuration
-public class WebConfig implements WebMvcConfigurer, AsyncConfigurer {
-
+public class WebConfig implements AsyncConfigurer, WebMvcConfigurer {
 
     @Value("${thread.pool.size}")
     private Integer poolSize;
 
     @Override
     public void addCorsMappings(CorsRegistry registry) {
-        List<String> allowedOrigins = Arrays.asList("*");
-        log.info("Allowed origins -> {}", allowedOrigins);
-        registry.addMapping("/api/**").allowedOrigins(allowedOrigins.toArray(new String[0])).allowedMethods("*");
+        List<String> origins = Arrays.asList("*");
+        log.info("Allowed origins -> {}", origins);
+        registry.addMapping("/api/**").allowedOrigins(origins.toArray(new String[0])).allowedMethods("*");
     }
 
     @Override
