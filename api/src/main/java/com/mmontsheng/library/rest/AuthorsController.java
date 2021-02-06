@@ -21,20 +21,26 @@ import com.mmontsheng.library.entities.Author;
 import com.mmontsheng.library.services.AuthorService;
 import com.mmontsheng.library.util.Utility;
 
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.tags.Tag;
+
 @RestController
 @RequestMapping("/api/authors")
+@Tag(name = "Authors Controller", description = "To handle all authors related requests")
 public class AuthorsController {
 
     @Autowired
     public AuthorService authorService;
 
     @GetMapping
+    @Operation(summary = "Get All", description = "Get all available authors")
     public Callable<ResponseEntity<BaseResponse>> get() {
         BaseResponse response = BaseResponse.builder().data(authorService.get()).build();
         return () -> ResponseEntity.ok(response);
     }
 
     @GetMapping("/{id}")
+    @Operation(summary = "Get One", description = "Get a specific author by id")
     public Callable<ResponseEntity<BaseResponse>> get(@PathVariable String id) {
         BaseResponse response = BaseResponse.builder().data(authorService.get(id)).build();
 
@@ -42,6 +48,7 @@ public class AuthorsController {
     }
 
     @PostMapping
+    @Operation(summary = "Create One", description = "Create a new author")
     public Callable<ResponseEntity<BaseResponse>> create(@Valid @RequestBody AuthorDTO request) {
         BaseResponse response = BaseResponse.builder().message("Author created").data(authorService.create(request))
                 .build();
@@ -49,6 +56,7 @@ public class AuthorsController {
     }
 
     @PutMapping("/{id}")
+    @Operation(summary = "Update One", description = "Updates a specific author by id")
     public Callable<ResponseEntity<BaseResponse>> update(@PathVariable String id,
             @Valid @RequestBody AuthorDTO request) {
         BaseResponse response = BaseResponse.builder().message("Author updated")
@@ -58,6 +66,7 @@ public class AuthorsController {
     }
 
     @PutMapping("/{id}/toggle-status")
+    @Operation(summary = "Update Status", description = "Updates a status of a author by id. Basically an enable or disable request")
     public Callable<ResponseEntity<BaseResponse>> toggleStatus(@PathVariable String id) {
         Author author = authorService.toggleStatus(id);
         BaseResponse response = BaseResponse.builder().message(Utility.statusUpdatedTo("Author", author.getEnabled()))
@@ -66,6 +75,7 @@ public class AuthorsController {
     }
 
     @DeleteMapping("/{id}")
+    @Operation(summary = "Delete One", description = "Deleted an author by id")
     public Callable<ResponseEntity<BaseResponse>> delete(@PathVariable String id) {
         authorService.delete(id);
         BaseResponse response = BaseResponse.builder().message("Author deleted").build();
